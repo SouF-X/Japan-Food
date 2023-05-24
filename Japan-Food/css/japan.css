@@ -1,0 +1,1060 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --blue-color: #21243d;
+  --beige-color: #ffd17d;
+  --black-color: #111111;
+  --main-transition: 0.3s;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+  margin: 0;
+}
+::-webkit-scrollbar {
+  width: 15px;
+}
+::-webkit-scrollbar-track {
+  background-color: white;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #1d2036;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--blue-color);
+}
+.btn-shape {
+  padding: 15px 0;
+  width: 220px;
+  border-radius: 25px;
+  text-transform: uppercase;
+  background-color: var(--blue-color);
+  color: white;
+  border: none;
+  margin-top: 70px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: var(--main-transition);
+  font-family: "Montserrat", sans-serif;
+  font-size: 17px;
+}
+.btn-shape:hover {
+  color: var(--beige-color);
+  background-color: #1d2036;
+  transform: scale(1.05);
+}
+/* Start Navbar */
+.navbar {
+  background-color: var(--blue-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+.navbar ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.navbar ul > li > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 30px;
+  height: 72px;
+  color: white;
+  text-transform: capitalize;
+  font-size: 20px;
+  font-weight: 400;
+  overflow: hidden;
+  transition: var(--main-transition);
+  position: relative;
+}
+.navbar ul > li > a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background-color: var(--beige-color);
+  top: 0;
+  left: -100%;
+  transition: var(--main-transition);
+}
+.navbar ul > li > a:hover {
+  color: var(--beige-color);
+  background-color: #1d2036;
+}
+.navbar ul > li > a:hover::before {
+  left: 0;
+}
+.navbar i {
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+}
+.navbar i:hover {
+  color: var(--beige-color);
+}
+@media (max-width: 991px) {
+  .navbar {
+    flex-direction: column;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .navbar ul > li > a {
+    padding: 0 12px;
+    font-size: 15px;
+  }
+  .navbar ul {
+    margin-top: 5px;
+  }
+}
+/* End Navbar */
+/* Start Header */
+.header {
+  background: url(/images/background.png);
+  background-position: center;
+  background-size: cover;
+  min-height: 95vh;
+  position: relative;
+}
+.header .content {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+.header .content h1 {
+  margin: 0;
+  color: var(--blue-color);
+  padding-top: 180px;
+  font-size: 80px;
+  color: #fafafa;
+  text-transform: uppercase;
+}
+.header .content p {
+  color: #fff;
+  font-size: 22px;
+  padding-top: 60px;
+  line-height: 1.4;
+}
+@media (max-width: 767px) {
+  .header .content {
+    text-align: center;
+  }
+  .header .content h1 {
+    font-size: 65px;
+  }
+  .header .content p {
+    text-align: center;
+    font-size: 15px;
+  }
+}
+/* End Header */
+/* Start Popular Menu */
+.menu {
+  background-color: var(--blue-color);
+  padding: 100px 40px;
+  position: relative;
+  overflow: hidden;
+}
+.menu .shape1 {
+  background-image: url(/images/menu-shape-1.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 191px;
+  height: 191px;
+  top: -30px;
+  right: -40px;
+}
+.menu .shape2 {
+  background-image: url(/images/menu-shape-2.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 165px;
+  height: 72px;
+  top: -15px;
+  left: 210px;
+}
+.menu .shape3 {
+  background-image: url(/images/menu-shape-3.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 95px;
+  height: 27px;
+  top: 180px;
+  left: 70px;
+}
+.menu .shape4 {
+  background-image: url(/images/menu-shape-4.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 72px;
+  height: 165px;
+  top: 350px;
+  right: -20px;
+}
+.menu .shape5 {
+  background-image: url(/images/menu-shape-3.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 95px;
+  height: 27px;
+  bottom: 30px;
+  right: 0;
+}
+.menu .shape6 {
+  background-image: url(/images/menu-shape-5.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 175px;
+  height: 175px;
+  bottom: 50px;
+  left: -70px;
+}
+.menu .text {
+  text-align: center;
+  color: white;
+  margin-bottom: 80px;
+}
+.menu .text h1 {
+  font-size: 64px;
+  text-transform: capitalize;
+  margin-bottom: 40px;
+}
+.menu .text p {
+  font-size: 25px;
+  line-height: 1.4;
+}
+.menu .cards {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.menu .cards .box {
+  position: relative;
+}
+.menu .cards .box img {
+  width: 250px;
+  height: 250px;
+  display: block;
+  transition: var(--main-transition);
+  border-radius: 50%;
+}
+.menu .cards .box .image1 {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+.menu .cards .box .image1 .word {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #ffd17dc2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-transform: uppercase;
+  border-radius: 50%;
+  transition: var(--main-transition);
+  opacity: 0;
+}
+.menu .cards .box .image1 .word:hover {
+  opacity: 1;
+}
+.menu .cards .box .info {
+  text-align: center;
+  color: white;
+}
+.menu .cards .box .info h3 {
+  text-transform: capitalize;
+  font-size: 28px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+@media (max-width: 847px) {
+  .menu .cards .box3 {
+    margin-top: 30px;
+  }
+}
+@media (max-width: 767px) {
+  .menu .cards {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .menu .cards .box:not(:last-child) {
+    margin-bottom: 50px;
+  }
+  .menu .cards .box3 {
+    margin-top: 0;
+  }
+  .menu .text p {
+    font-size: 20px;
+  }
+  .menu .shapes .shape1 {
+    display: none;
+  }
+  .menu .shapes .shape3 {
+    display: none;
+  }
+  .menu .shapes .shape6 {
+    display: none;
+  }
+}
+/* End Popular Menu */
+/* Start Sushi Sashimi Widget */
+.sushi-sashimi-widget {
+  background-color: var(--beige-color);
+  padding: 200px 40px;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  overflow: hidden;
+}
+.sushi-sashimi-widget .sushi-image {
+  flex-basis: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sushi-sashimi-widget .sushi-image img {
+  animation: up-and-down 4s linear infinite;
+  position: relative;
+}
+.sushi-sashimi-widget .sushi-info {
+  flex-basis: 50%;
+}
+.sushi-sashimi-widget .sushi-info h1 {
+  font-size: 75px;
+  color: var(--blue-color);
+  text-transform: capitalize;
+}
+.sushi-sashimi-widget .sushi-info p {
+  font-size: 30px;
+  color: var(--blue-color);
+  margin-top: 50px;
+  margin-bottom: 70px;
+  line-height: 1.4;
+}
+.sushi-sashimi-widget button {
+  margin: 0;
+}
+.shapes1 .shape1 {
+  background-image: url(/images/sashimi-shape1.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 72px;
+  height: 165px;
+  right: 30px;
+  top: 30px;
+}
+.shapes1 .shape2 {
+  background-image: url(/images/sashimi-shape-2.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 191px;
+  height: 191px;
+  left: 80px;
+  top: 80px;
+}
+.shapes1 .shape3 {
+  background-image: url(/images/sashimi-shape-2.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 191px;
+  height: 191px;
+  right: -50px;
+  bottom: 80px;
+}
+.shapes1 .shape4 {
+  background-image: url(/images/sashimi-shape1.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 72px;
+  height: 165px;
+  left: 30px;
+  bottom: 30px;
+}
+@media (max-width: 1115px) {
+  .sushi-sashimi-widget .sushi-image img {
+    width: 350px;
+  }
+  .sushi-sashimi-widget .sushi-info h1 {
+    font-size: 60px;
+  }
+  .sushi-sashimi-widget .sushi-info p {
+    font-size: 22px;
+  }
+}
+@media (max-width: 991px) {
+  .sushi-sashimi-widget .sushi-image {
+    flex-basis: 100%;
+  }
+  .sushi-sashimi-widget .sushi-info {
+    flex-basis: 100%;
+  }
+  .sushi-sashimi-widget .sushi-info {
+    text-align: center;
+    margin-top: 70px;
+  }
+  .sushi-sashimi-widget .sushi-info h1 {
+    font-size: 75px;
+  }
+  .sushi-sashimi-widget .sushi-info p {
+    font-size: 30px;
+  }
+}
+@media (max-width: 660px) {
+  .sushi-sashimi-widget .sushi-info h1 {
+    font-size: 42px;
+  }
+  .sushi-sashimi-widget .sushi-info p {
+    font-size: 17px;
+  }
+  .sushi-sashimi-widget .sushi-image img {
+    width: 300px;
+  }
+  .shapes1 .shape2 {
+    left: -60px;
+  }
+  .shapes1 .shape3 {
+    right: -100px;
+  }
+}
+/* End Sushi Sashimi Widget */
+/* Start Statistics */
+.stats {
+  background-color: var(--blue-color);
+  color: white;
+  padding: 100px 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.shapes2 .shape1 {
+  background-image: url(/images/menu-shape-1.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 191px;
+  height: 191px;
+  top: 80px;
+  right: 90px;
+}
+.shapes2 .shape2 {
+  background-image: url(/images/menu-shape-2.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 165px;
+  height: 72px;
+  top: 70px;
+  left: 65px;
+}
+.shapes2 .shape3 {
+  background-image: url(/images/menu-shape-3.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 97px;
+  height: 25px;
+  top: 270px;
+  left: 70px;
+}
+.shapes2 .shape4 {
+  background-image: url(/images/menu-shape-3.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 97px;
+  height: 25px;
+  bottom: 40px;
+  right: 50px;
+}
+.shapes2 .shape5 {
+  background-image: url(/images/menu-shape-1.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 191px;
+  height: 191px;
+  bottom: -100px;
+  left: 250px;
+}
+.stats .stats-content {
+  text-align: center;
+  position: relative;
+}
+.stats .stats-content h1 {
+  font-size: 62px;
+  text-transform: capitalize;
+}
+.stats .stats-content p {
+  font-size: 25px;
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+.stats .stats-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.stats .stats-info .text {
+  width: 250px;
+  height: 250px;
+  border: 5px solid white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  transition: var(--main-transition);
+  color: var(--beige-color);
+}
+.stats .stats-info .text::before {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: white;
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+.stats .stats-info .text:hover::before {
+  z-index: -1;
+  animation: left-move 0.2s linear forwards;
+  opacity: 1;
+}
+.stats .stats-info span {
+  font-size: 75px;
+  font-weight: bold;
+}
+.stats .stats-info p {
+  font-size: 42px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+@media (max-width: 991px) {
+  .shapes2 .shape1 {
+    display: none;
+  }
+  .shapes2 .shape3 {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .stats .stats-info {
+    flex-direction: column;
+  }
+  .stats .stats-info .text:not(:last-child) {
+    margin-bottom: 50px;
+  }
+  .stats .stats-content p {
+    font-size: 20px;
+  }
+  .shapes2 .shape5 {
+    left: 20px;
+  }
+}
+/* Start Statistics */
+/* Start Sushi Sashimi Widget */
+.sushi-nigiri-widget {
+  background-color: var(--beige-color);
+  padding: 200px 40px;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  overflow: hidden;
+}
+.sushi-nigiri-widget .sushi-image {
+  flex-basis: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sushi-nigiri-widget .sushi-image img {
+  animation: up-and-down 4s linear infinite;
+  position: relative;
+  border-radius: 50%;
+}
+.sushi-nigiri-widget .sushi-info {
+  flex-basis: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sushi-nigiri-widget .sushi-info h1 {
+  font-size: 75px;
+  color: var(--blue-color);
+  text-transform: capitalize;
+}
+.sushi-nigiri-widget .sushi-info p {
+  font-size: 30px;
+  color: var(--blue-color);
+  margin-top: 50px;
+  margin-bottom: 70px;
+  line-height: 1.4;
+}
+.sushi-nigiri-widget button {
+  margin: 0;
+}
+.shapes3 .shape1 {
+  background-image: url(/images/sashimi-shape1.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 72px;
+  height: 165px;
+  left: 30px;
+  top: 30px;
+}
+.shapes3 .shape2 {
+  background-image: url(/images/sashimi-shape-2.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 191px;
+  height: 191px;
+  right: 80px;
+  top: 80px;
+}
+.shapes3 .shape3 {
+  background-image: url(/images/sashimi-shape-2.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 191px;
+  height: 191px;
+  left: -100px;
+  bottom: 10px;
+}
+.shapes3 .shape4 {
+  background-image: url(/images/sashimi-shape1.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 72px;
+  height: 165px;
+  right: 30px;
+  bottom: 30px;
+}
+@media (max-width: 1115px) {
+  .sushi-nigiri-widget .sushi-image img {
+    width: 350px;
+  }
+  .sushi-nigiri-widget .sushi-info h1 {
+    font-size: 60px;
+  }
+  .sushi-nigiri-widget .sushi-info p {
+    font-size: 22px;
+  }
+}
+@media (max-width: 991px) {
+  .sushi-nigiri-widget {
+    padding: 100px 40px;
+  }
+  .sushi-nigiri-widget .sushi-image {
+    flex-basis: 100%;
+  }
+  .sushi-nigiri-widget .sushi-info {
+    flex-basis: 100%;
+  }
+  .sushi-nigiri-widget .sushi-info {
+    text-align: center;
+    margin-bottom: 120px;
+  }
+  .sushi-nigiri-widget .sushi-info h1 {
+    font-size: 75px;
+  }
+  .sushi-nigiri-widget .sushi-info p {
+    font-size: 30px;
+  }
+  .shapes3 .shape2 {
+    display: none;
+  }
+}
+@media (max-width: 660px) {
+  .sushi-nigiri-widget .sushi-info h1 {
+    font-size: 42px;
+  }
+  .sushi-nigiri-widget .sushi-info p {
+    font-size: 17px;
+  }
+  .sushi-nigiri-widget .sushi-image img {
+    width: 300px;
+  }
+  .shapes3 .shape3 {
+    left: -100px;
+  }
+}
+/* End Sushi Sashimi Widget */
+/* Start Profil Information */
+.profil {
+  background: url(/images/background2.png);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  min-height: 110vh;
+}
+.profil .overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0 0 25 / 80%);
+}
+.profil .information {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  width: 100%;
+}
+.profil .information .image img {
+  width: 248px;
+  height: 248px;
+  border-radius: 50%;
+}
+.profil .information p {
+  font-size: 42px;
+  line-height: 1.5;
+  margin: 50px 0;
+}
+.profil .information h2 {
+  font-size: 45px;
+}
+@media (max-width: 1075px) {
+  .profil .information p {
+    font-size: 35px;
+  }
+}
+@media (max-width: 900px) {
+  .profil .information p {
+    font-size: 30px;
+  }
+}
+@media (max-width: 767px) {
+  .profil .information p {
+    font-size: 25px;
+  }
+  .profil .information h2 {
+    font-size: 40px;
+  }
+}
+/* End Profil Information */
+/* Start Subscribtion */
+.subs {
+  background-color: var(--beige-color);
+  padding: 150px 40px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.shapes4 .shape1 {
+  background: url(/images/sashimi-shape-2.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 191px;
+  height: 191px;
+  top: -40px;
+  right: -40px;
+}
+.shapes4 .shape2 {
+  background: url(/images/Shape\ \(8\).png);
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 165px;
+  height: 72px;
+  top: 50px;
+  left: 50px;
+}
+.shapes4 .shape3 {
+  background: url(/images/Shape\ \(9\).png);
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 97px;
+  height: 25px;
+  top: 50px;
+  right: 280px;
+}
+.shapes4 .shape4 {
+  background: url(/images/sashimi-shape1.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 72px;
+  height: 165px;
+  bottom: 25px;
+  right: 40px;
+}
+.shapes4 .shape5 {
+  background: url(/images/Shape\ \(9\).png);
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 97px;
+  height: 25px;
+  bottom: 50px;
+  left: 130px;
+}
+.subs h1 {
+  font-size: 75px;
+  text-transform: capitalize;
+  color: var(--blue-color);
+}
+.subs p {
+  font-size: 30px;
+  color: var(--blue-color);
+  margin-top: 55px;
+  margin-bottom: 70px;
+}
+.subs .email-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.subs .email-label input {
+  padding: 20px;
+  width: 600px;
+  border-radius: 60px;
+  outline: none;
+  border: none;
+}
+.subs .email-label input:focus {
+  box-shadow: 0 0 10px white;
+}
+.subs .email-label input::placeholder {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+}
+.subs .email-label button {
+  padding: 16px;
+  width: 200px;
+  border-radius: 60px;
+  outline: none;
+  border: none;
+  background-color: var(--blue-color);
+  color: white;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+  margin-left: -100px;
+  cursor: pointer;
+  transition: var(--main-transition);
+  caret-color: var(--blue-color);
+}
+.subs .email-label button:hover {
+  background-color: #191c30;
+  color: var(--beige-color);
+}
+@media (max-width: 767px) {
+  .subs h1 {
+    font-size: 60px;
+  }
+  .subs p {
+    font-size: 25px;
+  }
+  .subs .email-label {
+    flex-direction: column;
+  }
+  .subs .email-label input {
+    width: 350px;
+    margin-bottom: 30px;
+  }
+  .shapes4 .shape2 {
+    display: none;
+  }
+}
+/* End Subscribtion */
+/* Start Footer */
+.footer {
+  background-color: black;
+  padding: 70px 0 0;
+}
+
+.footer .container {
+  padding: 0 40px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.footer .box1 {
+  flex-basis: 50%;
+  color: #fff;
+  width: 80%;
+}
+
+.footer .box1 h3 {
+  font-size: 33px;
+  text-transform: uppercase;
+}
+
+.footer .box1 p {
+  line-height: 1.5;
+  font-size: 22px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.footer .box1 .social {
+  display: flex;
+}
+
+.footer .box1 .social li {
+  margin-right: 10px;
+}
+
+.footer .box1 .social li a {
+  background-color: white;
+  color: black;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  transition: var(--main-transition);
+  border-radius: 50%;
+}
+
+.footer .box1 .social .instagram:hover {
+  background-color: #e4405f;
+  color: white;
+}
+
+.footer .box1 .social .facebook:hover {
+  background-color: #1877f2;
+  color: white;
+}
+
+.footer .box1 .social .twitter:hover {
+  background-color: #1da1f2;
+  color: white;
+}
+
+.footer .box1 .social .whatsapp:hover {
+  background-color: #25d366;
+  color: white;
+}
+
+.footer .box2 {
+  flex-basis: 50%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 20px;
+}
+
+.footer .box2 h3 {
+  font-size: 33px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.footer .box .links li {
+  padding: 15px 0;
+  transition: var(--main-transition);
+}
+
+.footer .box .links li:not(:last-child) {
+  border-bottom: 1px solid #444;
+}
+
+.footer .box .links li:hover {
+  padding-left: 10px;
+}
+
+.footer .box .links li a {
+  text-transform: capitalize;
+  font-family: "Montserrat", sans-serif;
+  color: #b9b9b9;
+  transition: var(--main-transition);
+}
+
+.footer .box .links li:hover a {
+  color: white;
+}
+
+.footer .box .links li a::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\F101";
+  font-weight: 900;
+  margin-right: 10px;
+  color: var(--beige-color);
+}
+
+.footer .copyright {
+  font-family: "Oswald", sans-serif;
+  padding: 25px 0;
+  text-align: center;
+  color: white;
+  margin: 50px 0 0;
+  border-top: 1px solid #444;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+.footer .copyright span {
+  color: var(--beige-color);
+}
+@media (max-width: 767px) {
+  .footer .container {
+    gap: 35px;
+  }
+}
+/* End Footer */
+/* Start Animation */
+@keyframes up-and-down {
+  0%,
+  100% {
+    top: 0;
+  }
+
+  50% {
+    top: -50px;
+  }
+}
+@keyframes left-move {
+  0% {
+    width: 12px;
+    height: 12px;
+  }
+
+  100% {
+    border-radius: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+@keyframes right-move {
+  0% {
+    right: -5px;
+    width: 12px;
+    height: 12px;
+  }
+
+  100% {
+    right: 0;
+    border-radius: 0;
+    width: 50%;
+    height: 100%;
+  }
+}
+/* End Animation */
